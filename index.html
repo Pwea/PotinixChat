@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat_styles.css">
+    <link rel="stylesheet" href="popup_styles.css">
+    <link rel="icon" type="image/x-icon" href="potinixchat_icon.ico">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <div id="appname">
+                <img src="potinixchat_profile.jpg" alt="PotinixChat Image" width="20%" height="20%">
+                <h3>PotinixChat</h3>
+            </div>
+            <hr>
+            <br>
+            <div class="channel-header">TEXT CHANNELS</div>
+            <button type="button" class="channel" data-channel="general"
+            onmouseover="changeChannelColor(0, 'hovering')"
+            onmouseout="changeChannelColor(0, 'lefthover')"
+            onclick="changeChannelColor(0, 'clicked')">
+            🌐 general
+            </button>
+            <button type="button" class="channel" data-channel="brainrot"
+            onmouseover="changeChannelColor(1, 'hovering')"
+            onmouseout="changeChannelColor(1, 'lefthover')"
+            onclick="changeChannelColor(1, 'clicked')">
+                💢 brainrot
+            </button>
+            <br>
+            <br>
+            <div class="channel-header">OTHER CHANNELS</div>
+            <button type="button" class="channel" data-channel="lobby"
+            onmouseover="changeChannelColor(2, 'hovering')"
+            onmouseout="changeChannelColor(2, 'lefthover')"
+            onclick="changeChannelColor(2, 'clicked')">
+            🔱 elections
+            </button>
+            <button type="button" class="channel" data-channel="gaming"
+                onmouseover="changeChannelColor(3, 'hovering')"
+                onmouseout="changeChannelColor(3, 'lefthover')"
+                onclick="changeChannelColor(3, 'clicked')">
+                🎮 gaming
+            </button>
+            <p id="server_status_text">Server:</p>
+            <div id="server_status"></div>
+            <div id="settings">
+                <a href="">
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="30px" height="30px" stroke-width="1.9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#34b233"><path d="M22 5V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19V5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5Z" stroke="#34b233" stroke-width="1.9"></path><path d="M2 12H6" stroke="#34b233" stroke-width="1.9"></path><path d="M6 3V21" stroke="#34b233" stroke-width="1.9"></path><path d="M15.5 11.5L12 14.5" stroke="#34b233" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17 10.01L17.01 9.99889" stroke="#34b233" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+            </div>
+        </div>
+        <div id="chat">
+            <div id="chat-header">🌐 general</div>
+            <div id="chat-window"></div>
+            <div id="message-input">
+                <input type="text" id="message" placeholder="Message 🌐 general" autocomplete="off" maxlength="255">
+                <p id="input-counter">0/255</p>
+            </div>
+        </div>
+
+        <div id="user-list"></div>
+
+        <div id="popups"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="theme_changer.js"></script>
+</body>
+
+</html>
